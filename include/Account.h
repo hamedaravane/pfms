@@ -9,7 +9,6 @@ class Account {
 public:
     Account(const std::string& name, double balance = 0.0);
     
-    // Member functions
     void deposit(double amount);
     void withdraw(double amount);
     double get_balance() const;
@@ -20,7 +19,7 @@ public:
 private:
     std::string name;
     double balance;
-    std::vector<Transaction> transactions; // List of transactions
+    std::vector<Transaction> transactions;
 };
 
-#endif // ACCOUNT_H
+#endif
