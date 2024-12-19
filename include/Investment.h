@@ -6,10 +6,10 @@
 
 class Investment {
 public:
-    Investment(const std::string& type, double amount, double interest_rate, int duration_years);
+    Investment(std::string  type, double amount, double interest_rate, int duration_years);
 
-    void add_investment(Account& account);
-    double calculate_roi() const;
+    void add_investment(Account& account) const;
+    [[nodiscard]] double calculate_roi() const;
 
 private:
     std::string type;

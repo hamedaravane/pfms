@@ -1,10 +1,12 @@
 #include "Investment.h"
+
+#include <utility>
 #include "Transaction.h"
 
-Investment::Investment(const std::string& type, double amount, double interest_rate, int duration_years)
-    : type(type), amount(amount), interest_rate(interest_rate), duration_years(duration_years) {}
+Investment::Investment(std::string  type, const double amount, const double interest_rate, const int duration_years)
+    : type(std::move(type)), amount(amount), interest_rate(interest_rate), duration_years(duration_years) {}
 
-void Investment::add_investment(Account& account) {
+void Investment::add_investment(Account& account) const {
     account.deposit(amount);
     account.add_transaction(Transaction("Investment", amount, "2024-06-17"));
 }

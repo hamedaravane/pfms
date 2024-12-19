@@ -27,7 +27,7 @@ void FileIO::load_accounts(std::vector<Account>& accounts, const std::string& fi
     std::string name;
     double balance;
     while (file >> name >> balance) {
-        accounts.push_back(Account(name, balance));
+        accounts.emplace_back(name, balance);
     }
 
     file.close();

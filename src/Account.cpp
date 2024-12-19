@@ -1,9 +1,10 @@
 #include "Account.h"
 #include <iostream>
+#include <utility>
 
-Account::Account(const std::string& name, double balance) : name(name), balance(balance) {}
+Account::Account(std::string  name, const double balance) : name(std::move(name)), balance(balance) {}
 
-void Account::deposit(double amount) {
+void Account::deposit(const double amount) {
     balance += amount;
     add_transaction(Transaction("Deposit", amount, "2024-06-17"));
 }

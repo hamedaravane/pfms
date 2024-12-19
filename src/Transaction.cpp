@@ -1,7 +1,9 @@
 #include "Transaction.h"
 
-Transaction::Transaction(const std::string& type, double amount, const std::string& date)
-    : type(type), amount(amount), date(date) {}
+#include <utility>
+
+Transaction::Transaction(std::string  type, const double amount, std::string  date)
+    : type(std::move(type)), amount(amount), date(std::move(date)) {}
 
 std::string Transaction::get_type() const {
     return type;

@@ -1,6 +1,8 @@
 #include "Budget.h"
 
-Budget::Budget(const std::string& category, double amount) : category(category), budget_amount(amount) {}
+#include <utility>
+
+Budget::Budget(std::string  category, const double amount) : category(std::move(category)), budget_amount(amount) {}
 
 void Budget::set_budget(double amount) {
     budget_amount = amount;

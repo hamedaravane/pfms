@@ -6,17 +6,16 @@
 
 class Transaction {
 public:
-    Transaction(const std::string& type, double amount, const std::string& date);
+    Transaction(std::string  type, double amount, std::string  date);
 
-    // Accessor functions
-    std::string get_type() const;
-    double get_amount() const;
-    std::string get_date() const;
+    [[nodiscard]] std::string get_type() const;
+    [[nodiscard]] double get_amount() const;
+    [[nodiscard]] std::string get_date() const;
 
 private:
-    std::string type;  // "Deposit" or "Withdraw"
-    double amount;     // Transaction amount
-    std::string date;  // Transaction date (format: YYYY-MM-DD)
+    std::string type;
+    double amount;
+    std::string date;
 };
 
-#endif // TRANSACTION_H
+#endif

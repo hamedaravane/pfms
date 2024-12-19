@@ -7,12 +7,12 @@
 
 class Account {
 public:
-    Account(const std::string& name, double balance = 0.0);
+    explicit Account(std::string  name, double balance = 0.0);
     
     void deposit(double amount);
     void withdraw(double amount);
-    double get_balance() const;
-    std::string get_name() const;
+    [[nodiscard]] double get_balance() const;
+    [[nodiscard]] std::string get_name() const;
     void add_transaction(const Transaction& transaction);
     void print_transactions() const;
 
