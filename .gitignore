@@ -7,6 +7,7 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+cmake-build-debug/
 
 # Ignore Visual Studio build files
 *.tlog
@@ -41,8 +42,6 @@ x64/
 # Compiled Object files
 *.slo
 *.lo
-*.o
-*.obj
 
 # Precompiled Headers
 *.gch
@@ -51,26 +50,22 @@ x64/
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Compiled Static libraries
 *.lai
 *.la
-*.a
-*.lib
 
 # Fortran module files
 *.mod
 *.smod
 
 # Executables
-*.exe
-*.out
 *.app
 
 # Editor-specific files
 .vscode/
 *.code-workspace
+.idea
 
 # System-specific files
 .DS_Store
